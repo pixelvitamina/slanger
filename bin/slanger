@@ -91,6 +91,7 @@ EM.run do
   puts "                                         888                    "
   puts "                                    Y8b d88P                    "
   puts '                                    "Y88P"                      '
+  puts '   D E B U G                                                    '
   puts "\n" * 2
 
   puts "Slanger API server listening on port #{options[:api_port]}"

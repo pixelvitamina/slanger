@@ -29,7 +29,7 @@ module Slanger
       # status to return to the client.
       Slanger::Redis.publish(params[:channel_id], payload).tap do |r|
         r.callback { f.resume [202, {}, "202 ACCEPTED\n"] }
-        r.errback  { f.resume [500, {}, "500 INTERNAL SERVER ERROR\n"] }
+        r.errback  { f.resume [500, {}, "500 INTERNAL SERVER ERROR (redis publish!)\n"] }
       end
       Fiber.yield
     end

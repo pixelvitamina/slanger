@@ -31,7 +31,7 @@ module Slanger
       puts "++ debugging ++"
       puts "channel_id: #{params[:channel_id]}"
       puts "payload:"
-      pp payload
+      puts payload.inspect
       puts "-- debugging --"
 
       Slanger::Redis.publish(params[:channel_id], payload).tap do |r|
